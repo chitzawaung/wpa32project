@@ -15,6 +15,8 @@ class CreateBlogTagTable extends Migration
     {
         Schema::create('blog_tag', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger("blog_id");
+            $table->bigInteger("tag_id");
             $table->timestamps();
         });
     }
